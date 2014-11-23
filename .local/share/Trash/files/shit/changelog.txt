@@ -1,0 +1,3 @@
+1. Prestigio apps were updated
+2. Language localisations were improved
+3. Small fixes and system stability was improved.
