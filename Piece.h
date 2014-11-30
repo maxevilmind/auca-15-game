@@ -1,5 +1,4 @@
 //Declaration
-#include <SFML/Graphics.hpp>
 
 class Piece
 {
