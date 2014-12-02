@@ -1,4 +1,5 @@
 //Main
+
 #include <iostream>
 #include <vector>
 #include "Piece.h"
@@ -6,17 +7,23 @@
 int main()
 {
     //Fill vector with 15 pieces
-    std::vector<Piece> myPieces;
-    for (int i = 0; i < 15; ++i)
+    Piece my_map[4][4];
+    for (int i = 0; i < 4; ++i)
     {
-       Piece myPiece(1,1,1,1,i+1);
-       myPieces.push_back(myPiece);
+        for (int j = 0; j < 4; ++j)
+        {
+            Piece buffer(1,1,1,1,(i*4)+j);
+            my_map[i][j] = buffer;
+        }
     }
-
     //Show vector with pieces
-    for (int i = 0; i < 15; ++i)
+    for (int i = 0; i < 4; ++i)
     {
-        std::cout << "x is " << myPieces[i].num << std::endl;
+        for (int j = 0; j < 4; ++j)
+        {
+            std::cout<<my_map[i][j].num;
+        }
+        std::cout<<std::endl;
     }
     
     return 0;
