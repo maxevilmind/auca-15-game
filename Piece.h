@@ -1,5 +1,5 @@
 //Declaration
-
+#pragma once
 class Piece
 {
 public:
