@@ -10,9 +10,8 @@ int main()
 {
     Game g;
     Drawer d;
+
     d.DrawField(g.my_map);
     //Show vector with pieces
-
-    
     return 0;
 }
