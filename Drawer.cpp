@@ -12,14 +12,6 @@ Drawer::Drawer()
 }
 void Drawer::DrawField(Piece field[][4])
 {
-    // for (int i = 0; i < 4; ++i)
-    // {
-    //     for (int j = 0; j < 4; ++j)
-    //     {
-    //         std::cout<<field[i][j].num;
-    //     }
-    //     std::cout<<std::endl;
-    // }
     sf::RenderWindow window(sf::VideoMode(400, 400), "Game15"); // Draw window	
     while (window.isOpen())
     {
@@ -30,14 +22,18 @@ void Drawer::DrawField(Piece field[][4])
                 window.close();
         }
         sf::Sprite temp;
-        //temp.setTexture(piece_textures[7]);
+        
+        //field[0][0].num = 6; check if empty becomes some other 
+
         window.clear();
 	    for (int i = 0; i < 4; ++i)
 	    {
 	        for (int j = 0; j < 4; ++j)
 	        {
-	        	temp.setTexture(piece_textures[i+(j*4)]);
-	        	temp.setPosition(i*100,j*100);
+	        	//temp.setTexture(piece_textures[i+(j*4)]);
+                temp.setTexture(piece_textures[field[i][j].num]);
+	        	//temp.setPosition(i*100,j*100);
+                temp.setPosition(field[i][j].pos_x, field[i][j].pos_y);
 	            window.draw(temp);	            
 	        }
 	    }
