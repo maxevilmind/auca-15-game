@@ -10,8 +10,10 @@ int main()
 {
     Game g;
     Drawer d;
-
+    g.GetEmptyPiece();
+    g.Swap(g.my_map[2][2]);
     d.DrawField(g.my_map);
+
     //Show vector with pieces
     return 0;
 }
