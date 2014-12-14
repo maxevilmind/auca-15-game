@@ -42,10 +42,7 @@ void Game::GetEmptyPiece()
 void Game::Swap(Piece& ToBeSwaped) // Pass pointer on piece we want to move
 {
 	Piece buffer(0,0,0,0,0);
-	
 	buffer.num = ToBeSwaped.num;
-
 	ToBeSwaped.num = my_map[EmptyPiece_i][EmptyPiece_j].num;
-
 	my_map[EmptyPiece_i][EmptyPiece_j].num = buffer.num;
 }

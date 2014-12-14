@@ -11,8 +11,8 @@ int main()
     Game g;
     Drawer d;
     g.GetEmptyPiece();
-    g.Swap(g.my_map[2][2]);
-    d.DrawField(g.my_map);
+    //g.Swap(g.my_map[2][2]);
+    d.DrawField(g.my_map, g);
 
     //Show vector with pieces
     return 0;

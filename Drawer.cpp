@@ -10,7 +10,7 @@ Drawer::Drawer()
 		piece_textures.push_back(texture);
 	}
 }
-void Drawer::DrawField(Piece field[][4])
+void Drawer::DrawField(Piece field[][4], Game& ag)
 {
     sf::RenderWindow window(sf::VideoMode(400, 400), "Game15"); // Draw window	
     while (window.isOpen())
@@ -20,6 +20,23 @@ void Drawer::DrawField(Piece field[][4])
         {
             if (event.type == sf::Event::Closed)
                 window.close();
+            if (event.type == sf::Event::KeyPressed)
+            {
+                ag.GetEmptyPiece();
+                if (event.key.code == sf::Keyboard::Left && ag.EmptyPiece_i != 3)
+                {
+                    ag.Swap(ag.my_map[ag.EmptyPiece_i+1][ag.EmptyPiece_j]);
+                } else if (event.key.code == sf::Keyboard::Right && ag.EmptyPiece_i != 0)
+                {
+                    ag.Swap(ag.my_map[ag.EmptyPiece_i-1][ag.EmptyPiece_j]);
+                } else if (event.key.code == sf::Keyboard::Up && ag.EmptyPiece_j != 3)
+                {
+                    ag.Swap(ag.my_map[ag.EmptyPiece_i][ag.EmptyPiece_j+1]);
+                } else if (event.key.code == sf::Keyboard::Down && ag.EmptyPiece_j != 0)
+                {
+                    ag.Swap(ag.my_map[ag.EmptyPiece_i][ag.EmptyPiece_j-1]);
+                }
+            }
         }
         sf::Sprite temp;
         
