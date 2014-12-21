@@ -1,0 +1,1 @@
+g++ -std=c++11 '/home/et3rna1im4x/Desktop/Game15/Drawer.cpp' '/home/et3rna1im4x/Desktop/Game15/Game.cpp' '/home/et3rna1im4x/Desktop/Game15/main.cpp' '/home/et3rna1im4x/Desktop/Game15/Piece.cpp' -lsfml-graphics -lsfml-window -lsfml-system
